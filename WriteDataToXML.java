@@ -10,7 +10,11 @@ public class WriteDataToXML {
         
       XMLEncoder encoder = new XMLEncoder(new FileOutputStream("lab8.xml"));
       Random r = new Random();
-            
+    
+      /* note the use of the constant N
+       * this is so that changing the size
+       * of the target array is simplified.
+       */
       for (int i = 0; i < N; i++) 
           encoder.writeObject((r.nextInt(100) + 1));
       

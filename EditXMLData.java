@@ -19,7 +19,7 @@ public class EditXMLData {
         // Scanner object
         Scanner scanner = new Scanner(System.in);
 
-        // 
+        // assumes we know how many ints are in the data file
         int[] list = new int[N];
 
         for (int i = 0; i < N; i++) 
