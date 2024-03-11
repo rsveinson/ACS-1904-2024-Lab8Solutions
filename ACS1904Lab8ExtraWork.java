@@ -28,6 +28,14 @@ public class ACS1904Lab8ExtraWork{
         // open the output stream
         XMLEncoder encoder = new XMLEncoder(new FileOutputStream("cats.xml"));
         encoder.writeObject(cats);
+        
+        /* let's see what the file looks
+         * like when we write a series of individual
+         * Cat objects to the file
+         */
+        // for(Cat c : cats){
+            // encoder.writeObject(c);
+        // }
         encoder.close();
         
         // ****** now read it back *************
@@ -35,6 +43,7 @@ public class ACS1904Lab8ExtraWork{
         ArrayList<Cat> newCats = new ArrayList<>();
         newCats = (ArrayList)decoder.readObject();
         printList(newCats);
+        decoder.close();
         
         
 
